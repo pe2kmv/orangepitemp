@@ -6,8 +6,8 @@ WarningThresh = 50
 CritThresh = 70
 
 TempFileOpen = open(TempFile,"r")
-
 temperature = float(str(TempFileOpen.readlines(1))[2:7])/1000
+TempFileOpen.close()
 
 if temperature >= CritThresh:
 	print("CRITICAL TEMPERATURE - " + str(temperature) + " degrees C")
