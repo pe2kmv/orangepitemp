@@ -25,7 +25,7 @@ if args.units == None:
 else:
 	TempUnits = args.units.upper()
 
-if TempUnits <> "C":
+if TempUnits != "C":
 	TempUnits = "F"
 
 TempFileOpen = open(TempFile,"r")
