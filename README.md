@@ -13,6 +13,8 @@ Then add a suitable command to the nrpe.cfg file (usually /etc/nagios/nrpe.cfg)
 ## Usage
 The script has to be called with the 'warning' and the 'critical' threshold defined. The warning threshold is marked by the '-w' argument, the critical threshold is marked by the '-c' argument. The argument '-u' is optional as this can be used to switch to Fahrenheit. Setting the '-u' argument to 'F' (withouth quotes) switches to Fahrenheit. Any other value or leaving the '-u' argument out will use the Celsius scale.
 
+Changing the path assigned to 'TempFile' makes this script usable for Raspbian as well.
+
 ## Results
 After successfull run the script replies with one of four different exit codes and the actual temperature in the units selected.
 * exit(0) : OK --> no issue found
