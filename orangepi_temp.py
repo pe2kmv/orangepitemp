@@ -36,11 +36,11 @@ if TempUnits == "F":
 	temperature = (temperature*1.8)+32
 
 if temperature >= CritThresh:
-	print("CRITICAL TEMPERATURE - " + str(temperature) + " deg " + TempUnits)
+	print("CRITICAL TEMPERATURE - " + str(temperature) + " deg " + TempUnits + "|cputemp=" + str(temperature))
 	sys.exit(2)
 elif temperature >= WarningThresh:
-	print("TEMPERATURE WARNING - " + str(temperature) + " deg " + TempUnits)
+	print("TEMPERATURE WARNING - " + str(temperature) + " deg " + TempUnits + "|cputemp=" + str(temperature))
 	sys.exit(1)
 else:
-	print("TEMPERATURE OK - " + str(temperature) + " deg " + TempUnits)
+	print("TEMPERATURE OK - " + str(temperature) + " deg " + TempUnits + "|cputemp="+ str(temperature))
 	sys.exit(0)
